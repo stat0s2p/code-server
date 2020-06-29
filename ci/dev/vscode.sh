@@ -11,8 +11,6 @@ main() {
 
   # If the patch fails to apply, then it's likely already applied
   yarn vscode:patch &> /dev/null || true
-
-  find . -type f -name yarn.lock -print0|xargs -0 sed -i 's+https://registry.yarnpkg.com+http://192.168.2.129:8081/repository/npmgroup+g'
   (
     cd lib/vscode
     # Install VS Code dependencies.
