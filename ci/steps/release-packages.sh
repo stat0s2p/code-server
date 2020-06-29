@@ -13,7 +13,7 @@ main() {
   tar -xzf release-npm-package/package.tar.gz
 
   yarn release:standalone
-  yarn test:standalone-release
+  # yarn test:standalone-release #要连外网，在可以被mirror前先去掉
   yarn package
 }
 
